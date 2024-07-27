@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualization</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='output_styles.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Energy Forcasting Model</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="{{ url_for('static', filename='index.html') }}">About</a></li>
+      <li><a href="{{ url_for('static', filename='about.html') }}">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="right"></div>
+    <div class="left">
+      <div class="header">
+        <h3 class="animation a1">Model Visualization</h3>
+        <h3 class="animation a2">Visualization for {{ selected_model }}</h3>
+      </div>
+      <div class="header">
+        {% if selected_model %}
+          <img src="{{ url_for('static', filename=selected_model + '_image.png') }}" alt="{{ selected_model }} Model">
+        {% else %}
+          <p>No model selected</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

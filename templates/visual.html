@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Energy Consumption</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='input_styles.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Energy Forcasting Model</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="{{ url_for('static', filename='index.html') }}">About</a></li>
+      <li><a href="{{ url_for('static', filename='about.html') }}">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <h2 class="animation a1">Energy Consumption</h2>
+        <h3 class="animation a2">Choose model for Visualization</h3>
+      </div>
+      <!-- letting user to choose a model from drop down  -->
+      <form class="form" action="{{ url_for('visual') }}" method="POST">
+        <select name="model" id="model" class="form-field animation a3">
+          <option value="arima">ARIMA</option>
+          <option value="ann">ANN</option>
+          <option value="ets">ETS</option>
+          <option value="lstm">LSTM</option>
+          <!-- Add other model options here -->
+        </select>
+        <button type="submit" class="animation a6">Let's go</button>
+      </form>
+    </div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Energy Forecasting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Electrical Energy Forecasting System</h1>
+        <img src="electricity.png" alt="Electricity Image" class="main-image">
+        <p class="introduction">
+            Electricity forecasting involves predicting future electricity demand and supply to optimize energy production and distribution. Accurate forecasting is essential for balancing supply and demand, reducing operational costs, and ensuring the reliability of the power grid.
+        </p>
+        <p class="project-description">
+            Our project aims to develop a comprehensive forecasting system across multiple sectors. We utilize data sources from various sectors to ensure accurate and reliable predictions. Our process includes cleaning and preprocessing the data to ensure its quality and suitability for modeling. We use Python with Flask to power our backend logic and handle API interactions on the front end. The forecasting models we employ include:
+        </p>
+        <ul class="project-points">
+            <li><b>ARIMA</b></li>
+            <li><b>ANN</b></li>
+            <li><b>SARIMA</b></li>
+            <li><b>ETS</b></li>
+            <li><b>Prophet</b></li>
+            <li><b>LSTM</b></li>
+            <li><b>Hybrid models</b></li>
+        </ul>
+        <p class="project-description">
+            These models are used to make precise predictions, and we use Flask for prediction and visualization tasks.
+        </p>
+        
+        <div class="dataset-info">
+            <img src="dataset.png" alt="Energy Consumption Dataset" class="dataset-image">
+            <ul class="dataset-description">
+                <h2 class="dataset-title">About the Dataset</h2>
+
+                <li>The dataset we chose for the project is energy consumption.</li>
+                <li>It contains two columns: datetime (ds) and consumption (y).</li>
+                <li>Datetime is in hours.</li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <div class="model-info">
+           
+            <table class="model-table">
+                <tr>
+                    <th colspan="3"><h2>Forecasting Models</h2></th> 
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <th>Description</th>
+                    <th>Key Points</th>
+                </tr>
+                <tr>
+                    <td><b>ARIMA</b></td>
+                    <td>Autoregressive Integrated Moving Average model</td>
+                    <td>
+                        <ul>
+                            <li>Statistical time series forecasting method</li>
+                            <li>Suitable for univariate time series data</li>
+                            <li>Requires stationarity in the time series</li>
+                            <li>Considers autoregression, differencing, and moving average components</li>
+                            <li>Popular choice for short-term forecasting</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>ANN</b></td>
+                    <td>Artificial Neural Network model</td>
+                    <td>
+                        <ul>
+                            <li>Deep learning model inspired by the human brain</li>
+                            <li>Capable of learning complex patterns in data</li>
+                            <li>Requires large amounts of data for training</li>
+                            <li>Used for both regression and classification tasks</li>
+                            <li>Flexible architecture with multiple layers</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>SARIMA</b></td>
+                    <td>Seasonal Autoregressive Integrated Moving Average model</td>
+                    <td>
+                        <ul>
+                            <li>Extension of ARIMA for seasonal time series data</li>
+                            <li>Handles seasonality in addition to trend and noise</li>
+                            <li>Requires identification of seasonal periods</li>
+                            <li>Suitable for data with clear seasonal patterns</li>
+                            <li>Used for medium to long-term forecasting</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>ETS</b></td>
+                    <td>Error-Trend-Seasonality model</td>
+                    <td>
+                        <ul>
+                            <li>Exponential smoothing method for time series forecasting</li>
+                            <li>Models trend and seasonality components separately</li>
+                            <li>Applicable to data with no clear underlying model</li>
+                            <li>Requires estimation of smoothing parameters</li>
+                            <li>Useful for short-term forecasting and noise reduction</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Prophet</b></td>
+                    <td>Prophet model by Facebook</td>
+                    <td>
+                        <ul>
+                            <li>Time series forecasting tool developed by Facebook</li>
+                            <li>Handles seasonality, holidays, and outliers automatically</li>
+                            <li>Easy-to-use interface with intuitive parameters</li>
+                            <li>Designed for analysts with little or no expertise in forecasting</li>
+                            <li>Uses additive model with piecewise linear or logistic growth</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>LSTM</b></td>
+                    <td>Long Short-Term Memory model</td>
+                    <td>
+                        <ul>
+                            <li>Deep learning model for sequence prediction tasks</li>
+                            <li>Capable of learning long-term dependencies</li>
+                            <li>Uses gated recurrent units to overcome vanishing gradient problem</li>
+                            <li>Effective for time series data with complex patterns</li>
+                            <li>Requires substantial computational resources for training</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Hybrid models</b></td>
+                    <td>Combination of multiple forecasting models</td>
+                    <td>
+                        <ul>
+                            <li>Blend different forecasting techniques for improved accuracy</li>
+                            <li>Combines strengths of individual models</li>
+                            <li>Requires careful selection of constituent models</li>
+                            <li>Can handle various types of data and forecasting horizons</li>
+                            <li>Commonly used in industry for robust predictions</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

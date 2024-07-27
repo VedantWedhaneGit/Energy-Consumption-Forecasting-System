@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #00796b; /* Greenish-blue background */
+            background: url('https://i.pinimg.com/originals/79/9e/0d/799e0d7779f6ea6c3a89885ff60c55af.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .mentor-container {
+            width: 100%;
+            max-width: 600px; /* Adjust maximum width as needed */
+            margin: 20px 0; /* Space around the mentor block */
+            padding: 20px;
+            gap:10px;
+            background: #0d47a1; /* Darker blue background for mentor */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Center align text */
+            margin-right: 30px;
+        }
+
+        .mentor-container .info h2 {
+            margin: 0;
+            font-size: 22px; /* Font size for mentor name */
+            color: #fff; /* White color for mentor name */
+        }
+
+        .mentor-container .info p {
+            margin: 5px 0; /* Reduced margin */
+            color: #e1f5fe; /* Light blue color for the info text */
+        }
+
+        .mentor-container .info a {
+            color: #ffeb3b; /* Yellow color for the email link */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .mentor-container .info a:hover {
+            color: #e9d207; /* Bright yellow color on hover */
+        }
+
+        .team-container {
+            width: 100%;
+            max-width: 600px; /* Adjust maximum width as needed */
+            margin-top: 20px; /* Space above team members */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px; /* Space between team members */
+            text-align: center; /* Center align text */
+        }
+
+        .team-container .team-member {
+            padding: 20px;
+            background: #027b75; /* Darker blue background for each team member */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .team-container .team-member:hover {
+            transform: scale(1.05);
+            background-color: #e8ec05; /* Slightly lighter blue on hover */
+        }
+
+        .team-container .team-member h2 {
+            margin: 0;
+            font-size: 18px; /* Font size for team member name */
+            color: #fff; /* White color for team member name */
+        }
+
+        .team-container .team-member p {
+            margin: 5px 0;
+            font-size: 14px; /* Font size for team member details */
+            color: #e1f5fe; /* Light blue color for the info text */
+        }
+
+        .meet-heading {
+            text-align: center;
+            font-size: 3em;
+            color: #ffeb3b; /* Bright yellow color for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="meet-heading">Meet Our Team</h1>
+
+    <!-- Mentor Block -->
+    <div class="mentor-container">
+        <div class="info">
+            <h2>Sibi Manickam</h2>
+            <p>Infosys Springboard Mentor</p>
+            <a href="mailto:springboardmentor004@gmail.com">springboardmentor004@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- Team Members -->
+    <div class="team-container">
+        <div class="team-member">
+            <h2>Rishit Gupta</h2>
+            <p>Shikohabad, Uttar Pradesh
+            </p>
+            <p>Chandigarh University, 4th year</p>
+            <p><a href="mailto:rishitgupta1403@gmail.com">rishitgupta1403@gmail.com</a></p>
+        </div>
+        <div class="team-member">
+            <h2>Kriti Sachan</h2>
+            <p>Rewari, Haryana</p>
+            <p>Manipal University Jaipur, 4th year</p>
+            <p><a href="mailto:kritisachan2@gmail.com">kritisachan2@gmail.com</a></p>
+        </div>
+        <div class="team-member">
+            <h2>Amrutha C</h2>
+            <p>Bangalore, Karnataka</p>
+            <p>Dayananda Sagar University, 3rd year</p>
+            <p><a href="mailto:amruthachebbar@gmail.com" color = #ffeb3b >amruthachebbar@gmail.com</a></p>
+        </div>
+        <div class="team-member">
+            <h2>Vedant Wedhane</h2>
+            <p>Pune, Maharashtra</p>
+            <p>Pune Institute Of Computer Technology, 3rd year</p>
+            <p><a href="mailto:vedantwedhane@gmail.com">vedantwedhane@gmail.com</a></p>
+        </div>
+        <div class="team-member">
+            <h2>Shilpa</h2>
+            <p>Bangalore, Karnataka</p>
+            <p>RNSIT, 3rd year</p>
+            <p><a href="mailto:Shilpaparvathareddy@gmail.com">Shilpaparvathareddy@gmail.com</a></p>
+        </div>
+        <div class="team-member">
+            <h2>Nandini Gupta</h2>
+            <p>Lucknow, Uttar Pradesh</p>
+            <p>Amity University, 4th year</p>
+            <p><a href="mailto:nandinigupta@gmail.com">nandinigupta@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

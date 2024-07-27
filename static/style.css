@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://your-image-url.com/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #584c4c; /* Ensure text is readable over the background */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px; /* Increased padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly higher opacity for better readability */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners for a modern look */
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    width: 70%;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around images */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.main-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.introduction, .project-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 15px; /* Increased padding */
+    background-color: rgba(166, 213, 224, 0.7); /* Semi-transparent background for text */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.project-points {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-points li {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(163, 196, 221, 0.6); /* Background for points */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.project-points li:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media only screen and (max-width: 600px) {
+    .main-image {
+        width: 90%;
+    }
+}
+
+.dataset-title {
+    color: rgb(70, 55, 55); 
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(249, 249, 249, 0.2); /* Subtle shadow for text */
+}
+
+.dataset-info {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataset-image {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around images */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.dataset-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.dataset-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #100707;
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 20px; 
+    padding: 15px; /* Increased padding */
+    background-color: rgba(37, 23, 23, 0.7); /* Semi-transparent background for text */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.model-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.model-table th, .model-table td {
+    border: 1px solid #060000;
+    padding: 8px;
+    text-align: left;
+}
+
+.model-table th {
+    background-color: #000000;
+    text-align: center; 
+}
+
+.model-table td ul {
+    text-align: justify; 
+}
+
+.model-table td ul li {
+    margin-bottom: 5px; 
+}
+
+.table-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0b0101;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for text */
+}

@@ -1,0 +1,331 @@
+/* Importing Google Font */
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+/* Universal Box-Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #333, #555);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #080000;
+  color: #5f93ec;
+}
+
+.nav-links li:hover .dropdown-menu {
+  display: block;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.burger div:hover {
+  background-color: #e92a2a;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #150909;
+  border-radius: 4px;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(3, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #180909;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #250606;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    z-index: 999;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .burger {
+    display: flex;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220413/pngtree-wattmeter-displaying-power-consumption-of-light-bulb-using-electrical-current-photo-image_26497946.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-name: left;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+.right {
+  flex: 2;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  transition: 1s;
+  background-image: url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header > h2 {
+  font-size: 35px;
+  margin: 0;
+  color: #1f1d2d;
+}
+
+.header > h3 {
+  margin-top: 12px;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.534);
+}
+
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  outline: 0;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #0e1d2e;
+}
+
+.form > button {
+  padding: 15px 12px;
+  border: 0;
+  background: linear-gradient(to right, #e92a2a 50%, #1410ee 100%);
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-family: "Rubik", sans-serif;
+}
+
+.animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a2 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.a3 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+.a4 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
+.a5 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.a6 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}

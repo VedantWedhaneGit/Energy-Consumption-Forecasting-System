@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Energy Consumption</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='input_styles.css') }}">
+  <script>
+    function validateDate() {
+      var inputDate = document.getElementById('date_id').value;
+      // Regular expression for date format YYYY-MM-DD
+      var regex = /^\d{4}-\d{2}-\d{2}$/;
+      if (!regex.test(inputDate)) {
+        alert('Please enter a valid date in the format YYYY-MM-DD');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Energy Forcasting Model</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="{{ url_for('static', filename='index.html') }}">About</a></li>
+      <li><a href="{{ url_for('static', filename='about.html') }}">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <h2 class="animation a1">Energy Consumption</h2>
+        <h3 class="animation a2">Enter a Date to get Prediction</h3>
+      </div>
+      <form class="form" action="{{ url_for('predict') }}" method="POST" onsubmit="return validateDate()">
+        <input type="text" id="date_id" class="form-field animation a3" placeholder="Date (YYYY-MM-DD)" name="date_id">
+        <select name="model" id="model" class="form-field animation a3">
+          <option value="arima">ARIMA</option>
+          <option value="ann">ANN</option>
+          <option value="ets">ETS</option>
+          <option value="LSTM">LSTM</option>
+        </select>
+        <button type="submit" class="animation a6">Let's go</button>
+      </form>
+    </div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>
